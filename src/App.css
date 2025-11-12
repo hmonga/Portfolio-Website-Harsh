@@ -1,0 +1,158 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.beams-background {
+  position: absolute;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.demo-section {
+  margin-bottom: 3rem;
+}
+
+.demo-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card button {
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.8em 1.6em;
+  font-size: 1.1em;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.card p {
+  opacity: 0.8;
+}
+
+.about {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.App-footer {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: auto;
+}
+
+.App-footer p {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .demo-section h3,
+  .about h3 {
+    font-size: 1.5rem;
+  }
+}
+
