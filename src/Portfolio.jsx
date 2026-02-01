@@ -13,7 +13,7 @@ function Portfolio() {
       description: 'Full-stack LeetCode streak tracker with automated API integration for real-time progress monitoring. Features interactive calendar visualization showing daily submission counts, group leaderboards for competitive tracking, and a gamified character progression system that evolves based on problem-solving consistency. Built with modern web technologies for seamless performance and real-time updates.',
       tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'LeetCode API', 'Real-time DB', 'Gamification'],
       github: 'https://github.com/hmonga/LeetTracker',
-      demo: 'https://leet-tracker-gamma.vercel.app/',
+      demo: 'https://leetcode-tracker-bay.vercel.app/',
       image: '/Leetcode.png'
     },
     {
