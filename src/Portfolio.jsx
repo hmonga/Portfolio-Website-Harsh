@@ -9,21 +9,21 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: 'NYC Citi Bike Station Status',
-      description: 'Interactive Streamlit app that visualizes real-time Citi Bike availability across New York City. Pulls live GBFS feeds, overlays stations on a Folium map, lets you filter by dock/bike counts or bike type, and finds the nearest station to any address with optional routing via OSRM.',
-      tags: ['Python', 'Streamlit', 'Folium', 'GBFS API', 'OSRM', 'Data Visualization'],
-      github: 'https://github.com/hmonga/NYC-Citi-Bike-Station-Status',
-      demo: 'https://nycbikestatus.streamlit.app/',
-      image: '/Bike.png'
+      title: 'LeetTracker 2.0',
+      description: 'Full-stack LeetCode streak tracker with automated API integration for real-time progress monitoring. Features interactive calendar visualization showing daily submission counts, group leaderboards for competitive tracking, and a gamified character progression system that evolves based on problem-solving consistency. Built with modern web technologies for seamless performance and real-time updates.',
+      tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'LeetCode API', 'Real-time DB', 'Gamification'],
+      github: 'https://github.com/hmonga/LeetTracker',
+      demo: 'https://leetcode-tracker-b2ghra26o-harsh-mongas-projects.vercel.app',
+      image: '/Leetcode.png'
     },
     {
       id: 2,
-      title: 'Sales Data Analysis',
-      description: 'End-to-end sales data analysis project featuring data cleaning, exploratory analysis, and predictive modeling using linear regression. Analyzes sales patterns across products and regions with Python, Pandas, and scikit-learn.',
-      tags: ['Python', 'Pandas', 'scikit-learn', 'Linear Regression', 'Data Cleaning', 'EDA'],
-      github: 'https://github.com/hmonga/Sales_Data_Analysis',
-      demo: null,
-      image: '/Sales.png'
+      title: 'LeetCode Tracker',
+      description: 'Web application to track LeetCode progress and statistics in real-time. Features user authentication with Firebase, tracks solved problems (easy/medium/hard breakdown), acceptance rate, streak tracking, and progress visualization with charts. Full-stack application with React frontend and Spring Boot backend.',
+      tags: ['React', 'Vite', 'Firebase', 'Spring Boot', 'Java', 'Axios', 'Data Visualization'],
+      github: 'https://github.com/hmonga/LeetCode-Tracker',
+      demo: 'https://leet-code-tracker-roan.vercel.app/',
+      image: '/Leetcode.png'
     },
     {
       id: 3,
@@ -36,30 +36,30 @@ function Portfolio() {
     },
     {
       id: 4,
+      title: 'NYC Citi Bike Station Status',
+      description: 'Interactive Streamlit app that visualizes real-time Citi Bike availability across New York City. Pulls live GBFS feeds, overlays stations on a Folium map, lets you filter by dock/bike counts or bike type, and finds the nearest station to any address with optional routing via OSRM.',
+      tags: ['Python', 'Streamlit', 'Folium', 'GBFS API', 'OSRM', 'Data Visualization'],
+      github: 'https://github.com/hmonga/NYC-Citi-Bike-Station-Status',
+      demo: 'https://nycbikestatus.streamlit.app/',
+      image: '/Bike.png'
+    },
+    {
+      id: 5,
+      title: 'Sales Data Analysis',
+      description: 'End-to-end sales data analysis project featuring data cleaning, exploratory analysis, and predictive modeling using linear regression. Analyzes sales patterns across products and regions with Python, Pandas, and scikit-learn.',
+      tags: ['Python', 'Pandas', 'scikit-learn', 'Linear Regression', 'Data Cleaning', 'EDA'],
+      github: 'https://github.com/hmonga/Sales_Data_Analysis',
+      demo: null,
+      image: '/Sales.png'
+    },
+    {
+      id: 6,
       title: 'Election Analysis',
       description: 'Java data visualization tool for analyzing historical U.S. House and Senate election results. Parses CSV files and organizes data using custom linked data structures (YearNode, StateNode, ElectionNode). Features a graphical interface for exploring voter trends, candidate details, and winning parties across states and years.',
       tags: ['Java', 'Data Structures', 'Linked Lists', 'GUI', 'Data Visualization', 'CSV Parsing'],
       github: 'https://github.com/hmonga/Election-Analysis',
       demo: null,
       image: '/Election.png'
-    },
-    {
-      id: 5,
-      title: 'LeetCode Tracker',
-      description: 'Web application to track LeetCode progress and statistics in real-time. Features user authentication with Firebase, tracks solved problems (easy/medium/hard breakdown), acceptance rate, streak tracking, and progress visualization with charts. Full-stack application with React frontend and Spring Boot backend.',
-      tags: ['React', 'Vite', 'Firebase', 'Spring Boot', 'Java', 'Axios', 'Data Visualization'],
-      github: 'https://github.com/hmonga/LeetCode-Tracker',
-      demo: 'https://leet-code-tracker-roan.vercel.app/',
-      image: '/Leetcode.png'
-    },
-    {
-      id: 6,
-      title: 'LeetTracker 2.0',
-      description: 'Full-stack LeetCode streak tracker with automated API integration for real-time progress monitoring. Features interactive calendar visualization showing daily submission counts, group leaderboards for competitive tracking, and a gamified character progression system that evolves based on problem-solving consistency. Built with modern web technologies for seamless performance and real-time updates.',
-      tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'LeetCode API', 'Real-time DB', 'Gamification'],
-      github: 'https://github.com/hmonga/LeetTracker',
-      demo: 'https://leetcode-tracker-b2ghra26o-harsh-mongas-projects.vercel.app',
-      image: '/Leetcode.png'
     }
   ]
 
@@ -90,11 +90,7 @@ function Portfolio() {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`project-card ${project.id === 6 ? 'green-theme' : ''}`} 
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            <div key={project.id} className="project-card" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="project-image-container">
                 {project.image && project.image.startsWith('/') && !project.image.includes('placeholder') ? (
                   <img src={project.image} alt={project.title} className="project-image" />
