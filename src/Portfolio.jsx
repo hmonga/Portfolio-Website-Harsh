@@ -51,6 +51,15 @@ function Portfolio() {
       github: 'https://github.com/hmonga/LeetCode-Tracker',
       demo: 'https://leet-code-tracker-roan.vercel.app/',
       image: '/Leetcode.png'
+    },
+    {
+      id: 6,
+      title: 'LeetTracker 2.0',
+      description: 'Full-stack LeetCode streak tracker with automated API integration for real-time progress monitoring. Features interactive calendar visualization showing daily submission counts, group leaderboards for competitive tracking, and a gamified character progression system that evolves based on problem-solving consistency. Built with modern web technologies for seamless performance and real-time updates.',
+      tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'LeetCode API', 'Real-time DB', 'Gamification'],
+      github: 'https://github.com/hmonga/LeetTracker',
+      demo: 'https://leetcode-tracker-b2ghra26o-harsh-mongas-projects.vercel.app',
+      image: '/Leetcode.png'
     }
   ]
 
@@ -81,7 +90,11 @@ function Portfolio() {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={project.id} className="project-card" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div 
+              key={project.id} 
+              className={`project-card ${project.id === 6 ? 'green-theme' : ''}`} 
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="project-image-container">
                 {project.image && project.image.startsWith('/') && !project.image.includes('placeholder') ? (
                   <img src={project.image} alt={project.title} className="project-image" />
